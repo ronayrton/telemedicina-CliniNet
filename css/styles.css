@@ -1,0 +1,250 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family:Helvetica, sans-serif; , sans-serif; /* Fonte moderna e tecnológica */
+    background: linear-gradient(135deg, #eef2f3, #8e9eab); /* Fundo com gradiente sutil para um visual sofisticado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container principal para login e agendamento */
+.login-container, .agendamento-container, .dashboard-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo semi-transparente para um toque tecnológico */
+    padding: 40px; /* Mais espaço para criar uma sensação arejada */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada para criar profundidade */
+    max-width: 420px; /* Largura máxima para manter o layout responsivo */
+    width: 100%;
+    text-align: center;
+}
+
+/* Títulos */
+h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #7700ff; /* Azul tecnológico */
+    font-weight: 700; /* Negrito para dar mais destaque ao título */
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f1f3f5; /* Fundo claro para inputs */
+    color: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); /* Sombra leve */
+    transition: all 0.3s ease; /* Transição suave em todos os estados */
+}
+
+input:focus {
+    border-color: #7700ff; /* Destaque azul quando o campo está focado */
+    background-color: #fff; /* Mudança sutil no fundo ao focar */
+}
+
+/* Botões */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #7700ff, #735299); /* Gradiente tecnológico */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #7700ff, #1e013f); /* Escurece no hover */
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+button[type="submit"]:active {
+    background-color: #5c5268; /* Cor mais escura ao clicar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduz a sombra ao clicar */
+}
+
+/* Estilo da lista de consultas (Dashboard) */
+#consultasList {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#consultasList li {
+    background-color: #ffffff; /* Fundo branco para os itens */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); /* Sombra leve */
+    transition: all 0.3s ease;
+}
+
+#consultasList li:hover {
+    background-color: #f9f9f9; /* Fundo levemente mais claro no hover */
+}
+
+/* Adicionando animações para um efeito mais tecnológico */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container, .agendamento-container, .dashboard-container {
+    animation: fadeIn 0.5s ease-in-out; /* Animação suave ao carregar */
+}
+
+/* Melhorias futuras para o projeto */
+
+/* 1. Inclua um menu de navegação com ícones que deem acesso a outras partes da plataforma (consultas, perfil, agendamento). Isso pode ser feito com ícones vetoriais de fácil leitura. */
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    width: 200px; /* Largura da barra lateral */
+    height: 100vh; /* Altura total da tela */
+    background-color: #7700ff; /* Cor de fundo do menu */
+    position: fixed; /* Fixa o menu na lateral */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    z-index: 1000; /* Para que a barra fique sempre visível sobre o conteúdo */
+}
+
+/* Lista de links do menu */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo dos links */
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px; /* Espaçamento interno para os links */
+    display: flex; /* Usar flexbox para alinhar os ícones com o texto */
+    align-items: center;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Ícones no menu */
+.sidebar ul li a i {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    font-size: 20px;
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.sidebar ul li a:hover {
+    background-color: #140329; /* Cor mais escura ao passar o mouse */
+}
+
+/* Texto do menu */
+.sidebar ul li a span {
+    font-size: 18px;
+}
+
+/* Ajustar o conteúdo principal para dar espaço ao menu */
+.content {
+    margin-left: 250px; /* Espaço à esquerda para o menu */
+    padding: 20px; /* Espaçamento interno do conteúdo */
+}
+
+/* Para telas menores (responsividade) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Ajustar a largura para telas menores */
+    }
+    .content {
+        margin-left: 200px; /* Ajustar o conteúdo para telas menores */
+    }
+}
+
+
+/* Tabela de histórico de consultas */
+.consulta-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.consulta-table th, .consulta-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+/*Cor da tabela de historico de consulta*/
+.consulta-table th {
+    background-color: #7700ff;
+    color: white;
+}
+
+/* Formulários de perfil e agendamento */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7700ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 2. Implementar responsividade completa para telas menores, como dispositivos móveis. Exemplo: reduzir o padding e tamanho dos textos em telas de smartphones. */
+
+/* 3. Usar um esquema de cores "dark mode" para quem preferir interfaces mais escuras. Isso pode ser alternado por um botão no canto da tela. */
+
+/* 4. Inserir animações sutis ao realizar ações, como cliques nos botões, para aumentar a interatividade com os usuários. */
+
+/* 5. Oferecer suporte a múltiplos idiomas, já que o projeto pode ser expandido para diferentes regiões, com base em demandas de prefeituras e estados. */
+
+/* 6. Incluir um modal de confirmação para o agendamento de consultas, que confirma a data e hora com o paciente antes de concluir o agendamento. */
+
+/* 7. Futuramente, integrar um painel de estatísticas com gráficos que mostrem o número de consultas realizadas, pacientes atendidos e outras métricas importantes para as prefeituras. */
+
+/* 8. Usar integração com APIs de geolocalização para facilitar a busca de especialistas e médicos mais próximos do paciente, podendo até expandir para consultas presenciais. */
+
+/* 9. Implementar um sistema de notificações em tempo real para os pacientes e médicos sobre alterações em consultas ou lembretes. */
+
